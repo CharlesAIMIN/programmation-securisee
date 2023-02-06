@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Success !{% endblock %}
+
+{% block main %}
+<!-- Displaying the information that the user has entered. -->
+    <h1> Hi {{ name }} ! </h1>
+    <p> Your review is : </p><br>
+    <p> {{ review }} </p>
+    <p> You gave us the score : {{ score }}/5</p>
+{% endblock %}

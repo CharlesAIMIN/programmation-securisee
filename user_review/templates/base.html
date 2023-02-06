@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
+</head>
+
+<body>
+  <nav id="nav">
+    <a href="{{ url_for('index') }}">Flask app'</a>
+      <ul>
+    <li><a href="{{ url_for('review') }}">Review</a></li>
+  </ul>
+  </nav>
+
+  <main>{% block main %}{% endblock %}
+  </main>
+  <footer></footer>
+</body>
+</html>
