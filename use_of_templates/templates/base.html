@@ -5,16 +5,16 @@
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %}</title>
   <link rel="icon" type="image/png" href="{{ url_for('static', filename='media/esaip.jpg') }}" />
-  <link rel="stylesheet" href="{{ url_for('static', filename='css/XXXX.css') }}" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}" />
 </head>
 
 <body>
   <nav id="nav">
     <a href="{{ url_for('index') }}">Flask app'</a>
+  </nav>
     <ul>
       <li><a href="{{ url_for('time') }}">Time</a></li>
     </ul>
-  </nav>
   <main>{% block main %}{% endblock %}
   </main>
   <footer></footer>
