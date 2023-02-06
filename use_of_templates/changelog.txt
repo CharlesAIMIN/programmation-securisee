@@ -1,0 +1,4 @@
+### Fixed
+
+-In app.py, on line 32, added path to time.html, time and hour
+-In base.html, add css/main.css on line 8 to link base.html to main.css
