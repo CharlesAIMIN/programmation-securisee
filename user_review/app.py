@@ -21,36 +21,45 @@ def index():
 
 
 """
-The function show_review() is called when the user clicks the submit button on the form. 
+The function show_review() is called when the user clicks the submit button on the form.
 
 The function show_review() is defined to take one argument, request, which is a dictionary
-containing the data that was entered into the form. 
+containing the data that was entered into the form.
 
 The function show_review() extracts the data from the request dictionary and stores it in local
-variables. 
+variables.
 
 The function show_review() then renders the success.html template, passing it the local variables as
-arguments. 
+arguments.
 
 The success.html template displays the data that was entered into the form
 :return: The name, review, and score are being returned.
 """
-@app.route('/success/', methods =['POST'])
+
+
+@app.route('/success/', methods=['POST'])
 def show_review():
     name = request.form['nm']
     review = request.form['rm']
     score = request.form['sm']
-    return flask.render_template('success.html',name = name, review = review, score = score)
+    return flask.render_template(
+        'success.html',
+        name=name,
+        review=review,
+        score=score)
 
 
 """
 It renders the review.html template
 :return: The review.html file is being returned.
 """
+
+
 @app.route('/review/', methods=['POST', 'GET'])
 def review():
     return flask.render_template('review.html')
-    
-    
+
+
 if __name__ == '__main__':  # consider this line as the main
-    app.run('0.0.0.0', 8080, debug=True)  # start web server in debug mode on port 8080
+    # start web server in debug mode on port 8080
+    app.run('0.0.0.0', 8080, debug=True)
